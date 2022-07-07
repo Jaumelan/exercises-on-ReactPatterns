@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const NormalForm = ({ onSubmit }) => {
     const [ formValues, setFormValues ] = useState({
@@ -52,5 +52,5 @@ const NormalForm = ({ onSubmit }) => {
 export default NormalForm;
 
 NormalForm.propTypes = {
-    onSubmit: PropTypes.func.isRequired,
+    onSubmit: propTypes.func.isRequired,
 }

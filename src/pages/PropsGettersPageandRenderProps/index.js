@@ -1,5 +1,5 @@
 
-import FinalFormWithRenderProps from "../FinalWithRenderProps";
+import FinalFormWithRenderProps from "../../components/FinalWithRenderProps";
 
 const PropsGettersWithRenderPropsPage = () => {
   const onSubmit = (values) => alert(JSON.stringify(values));

@@ -1,6 +1,6 @@
-import MyBugButton from "../BugButton";
-import FinalErrorBoundary from "../FinalErrorBoundary";
-import ErrorBoundary from "../ErrorBoundary";
+import MyBugButton from "../../components/BugButton";
+import FinalErrorBoundary from "../../components/FinalErrorBoundary";
+import ErrorBoundary from "../../components/ErrorBoundary";
 
 const RenderPropsPage = () => {
     return (

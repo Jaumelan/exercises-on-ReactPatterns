@@ -1,4 +1,4 @@
-import MyFormControlled from "../WithControlledForm";
+import MyFormControlled from "../../components/WithControlledForm";
 
 const HOCPage = () => {
     //const handleNormalSubmit = data => alert(data);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LikeButton from "../LikeButton";
+import LikeButton from "../../components/LikeButton";
 
 const ControlPropsPage = () => {
   const [counter, setCounter] = useState(0);

@@ -1,5 +1,5 @@
 import { TodoProvider } from "../../context/todoContext";
-import Todos from "../Todos";
+import Todos from "../../components/Todos";
 
 const CompoundPattern = () => {
   return (

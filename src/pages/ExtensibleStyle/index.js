@@ -1,5 +1,5 @@
-import CustomButton, { BUTTON_TYPE_CLASSES } from "../CustomButton";
-import ExtensibleStyleButton from "../extensibleStyleButton";
+import CustomButton, { BUTTON_TYPE_CLASSES } from "../../components/CustomButton";
+import ExtensibleStyleButton from "../../components/extensibleStyleButton";
 
 const ExtensibleStyle = () => {
   return (

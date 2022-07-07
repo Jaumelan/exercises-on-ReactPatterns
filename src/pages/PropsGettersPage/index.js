@@ -1,5 +1,5 @@
 
-import FormWithRenderProps from "../FormWithRenderProps";
+import FormWithRenderProps from "../../components/FormWithRenderProps";
 
 const PropsGettersPage = () => {
   const onSubmit = (values) => alert(JSON.stringify(values));
