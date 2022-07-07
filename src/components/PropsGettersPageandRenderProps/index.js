@@ -1,14 +1,18 @@
 
-import FormWithRenderProps from "../FormWithRenderProps";
+import FinalFormWithRenderProps from "../FinalWithRenderProps";
 
-const PropsGettersPage = () => {
+const PropsGettersWithRenderPropsPage = () => {
   const onSubmit = (values) => alert(JSON.stringify(values));
+
+  const logChange = () => {
+    console.log("logChange");
+  }
 
   return (
     <div>
-      <h2>Form with Props Getters</h2>
-      <FormWithRenderProps initialState={{ name: "", jobTitle: "" }}>
-        {({ formValues, handleSubmit, handleChange }) => (
+      <h2>Form with Props Getters and Render Props</h2>
+      <FinalFormWithRenderProps initialState={{ name: "", jobTitle: "" }}>
+        {({ formValues, handleSubmit, getInputProps }) => (
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <p>Name</p>
@@ -16,7 +20,7 @@ const PropsGettersPage = () => {
                 type="text"
                 name="name"
                 value={formValues.name}
-                onChange={handleChange}
+                {...getInputProps()}
               />
             </div>
             <div>
@@ -25,7 +29,7 @@ const PropsGettersPage = () => {
                 type="text"
                 name="jobTitle"
                 value={formValues.jobTitle}
-                onChange={handleChange}
+                {...getInputProps({onChange: logChange})} 
               />
             </div>
             <button style={{ margin: "8px 0" }} type="submit">
@@ -33,9 +37,9 @@ const PropsGettersPage = () => {
             </button>
           </form>
         )}
-      </FormWithRenderProps>
+      </FinalFormWithRenderProps>
     </div>
   );
 };
 
-export default PropsGettersPage;
+export default PropsGettersWithRenderPropsPage;

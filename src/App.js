@@ -4,6 +4,7 @@ import RenderPropsPage from "./components/BugPage";
 import ControlPropsPage from "./components/ControlProps";
 import PropsGettersPage from "./components/PropsGettersPage";
 import HOCPage from "./components/HOCPage";
+import PropsGettersWithRenderPropsPage from "./components/PropsGettersPageandRenderProps";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <ControlPropsPage />
       <PropsGettersPage />
       <HOCPage />
+      <PropsGettersWithRenderPropsPage />
     </div>
   );
 }

@@ -1,7 +1,11 @@
 import propTypes from "prop-types";
 import { useState } from "react";
 
-const FormWithRenderProps = ({ initialState, children }) => {
+function callAll(...fns) {
+  return (...args) => fns.forEach((fn) => fn && fn(...args));
+}
+
+const FinalFormWithRenderProps = ({ initialState, children }) => {
   const [formValues, setFormValues] = useState({ ...initialState });
 
   const handleChange = ({ target }) => {
@@ -15,18 +19,22 @@ const FormWithRenderProps = ({ initialState, children }) => {
     _handleSubmit(formValues);
   };
 
+  const getInputProps = (props = {}) => ({
+    onChange: callAll(props.onChange, handleChange),
+  });
+
   const getStateAndHelpers = () => ({
     formValues,
-    handleChange,
+    getInputProps,
     handleSubmit,
   });
 
   return children(getStateAndHelpers());
 };
 
-FormWithRenderProps.PropTypes = {
+FinalFormWithRenderProps.PropTypes = {
   children: propTypes.func.isRequired,
   initialState: propTypes.object.isRequired,
 };
 
-export default FormWithRenderProps;
+export default FinalFormWithRenderProps;
