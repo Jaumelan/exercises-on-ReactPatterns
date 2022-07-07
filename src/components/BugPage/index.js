@@ -1,5 +1,6 @@
 import MyBugButton from "../BugButton";
 import FinalErrorBoundary from "../FinalErrorBoundary";
+import ErrorBoundary from "../ErrorBoundary";
 
 const RenderPropsPage = () => {
     return (
@@ -9,6 +10,10 @@ const RenderPropsPage = () => {
             <FinalErrorBoundary>
                 <MyBugButton />
             </FinalErrorBoundary>
+            <hr />
+            <ErrorBoundary render={() => <h2>Something went wrong.</h2>}>
+                <MyBugButton />
+            </ErrorBoundary>
         </div>
     );
 }

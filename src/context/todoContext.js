@@ -6,6 +6,8 @@ export const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState({});
 
   const handleSubmit = (todo) => {
+    console.log(todos)
+    console.log('todo ', todo)
     setTodos({ ...todos, [todo]: { name: todo, isDone: false } });
   };
 

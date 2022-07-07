@@ -6,6 +6,7 @@ const TodoForm = () => {
     const { handleSubmit } = useContext(TodoContext);
 
     const handleInputChange = ({ target: {value} }) => {
+        //console.log(value)
         setValue(value);
     }
 
