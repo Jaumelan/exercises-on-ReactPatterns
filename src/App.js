@@ -1,26 +1,13 @@
-import {
-  ExtensibleStyle,
-  CompoundPattern,
-  RenderPropsPage,
-  ControlPropsPage,
-  PropsGettersPage,
-  HOCPage,
-  PropsGettersWithRenderPropsPage,
-} from "./pages";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRouter from "./components/app-router";
 
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <ExtensibleStyle />
-      <CompoundPattern />
-      <RenderPropsPage />
-      <ControlPropsPage />
-      <PropsGettersPage />
-      <HOCPage />
-      <PropsGettersWithRenderPropsPage />
-    </div>
+    <Router>
+      <AppRouter />
+    </Router>
   );
 }
 

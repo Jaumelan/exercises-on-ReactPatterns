@@ -5,3 +5,4 @@ export { default as PropsGettersPage } from "./PropsGettersPage";
 export { default as PropsGettersWithRenderPropsPage } from "./PropsGettersPageandRenderProps";
 export { default as ExtensibleStyle } from "./ExtensibleStyle";
 export { default as CompoundPattern } from "./CompoundPattern";
+export { default as WelcomePage } from "./WelcomePage";
